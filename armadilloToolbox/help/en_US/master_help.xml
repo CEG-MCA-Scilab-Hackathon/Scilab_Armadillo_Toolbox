@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a2ac803132d09903539fd73eb7683abf3 SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armaClust.xml">
+<!ENTITY a75727f10df94532b4c152eb79b28ace3 SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armaImage.xml">
+<!ENTITY a84187ebf0958087b6074e4243d38d9af SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armaMat.xml">
+<!ENTITY ad40c0fb5e358b7b2db6d8d5c07b23cfc SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armaMatFunc.xml">
+<!ENTITY af7dc27ea45b80a6c9040aa1c0d3f8884 SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armaStat.xml">
+<!ENTITY ac7b55575403f5f701c11a9995f75497e SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armaVecFunc.xml">
+<!ENTITY a38b93561b1232a3e863d7d1cf6c6d064 SYSTEM "/home/ajay/Desktop/hackathonScilab/SecondIteration/MilestoneFiveFinal/MilestoneFive/armadilloToolbox/help/en_US/armadense.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='armadillotoolbox_manual'>
+    <title>armadilloToolbox</title>
+  </info>
+
+<part xml:id='section_572734dd27d84b0d1fcee36fa5f49c02'>
+<title>armadilloToolbox</title>
+&a2ac803132d09903539fd73eb7683abf3;
+&a75727f10df94532b4c152eb79b28ace3;
+&a84187ebf0958087b6074e4243d38d9af;
+&ad40c0fb5e358b7b2db6d8d5c07b23cfc;
+&af7dc27ea45b80a6c9040aa1c0d3f8884;
+&ac7b55575403f5f701c11a9995f75497e;
+&a38b93561b1232a3e863d7d1cf6c6d064;
+</part>
+</book>

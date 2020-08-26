@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from armadense.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="armadense" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>armadense</refname>
+    <refpurpose>armaVec function applies mathematical functions to to dense matrix(vector processing)</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   y = armaDenseMat(fname, inputMat, opt)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>y :</term>
+            <listitem><para> ouput</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>fname:</term>
+            <listitem><para> Function Name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inputMat :</term>
+            <listitem><para> input Dense Matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>opt :</term>
+            <listitem><para> additional arguements</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function accepts a Dense Matrix of values of double type and returns the output of respective function executed.
+Available functions are asScalar,
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Function Name: chol
+// Returns the cholesky decomposition of input matrix
+// Calculating the chol.
+
+inputMat= [2,1,0;1,2,1;0,1,2];
+result = armaDenseMat("chol",inputMat)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Function Name: eig_sym
+// Returns the Eigen decomposition of dense symmetric/hermitian input matrix
+// Calculating the eigen avlue
+
+inputMat= [2,1,0;1,2,1;0,1,2];
+result = armaDenseMat("eig_sym",inputMat)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Function Name: eig_gen
+// Returns the Eigen decomposition of dense general (non-symmetric/non-hermitian) square input matrix
+// Calculating the eigen avlue
+
+inputMat= [2,1,0;1,2,1;0,1,2];
+result = armaDenseMat("eig_gen",inputMat)
+result = armaDenseMat("eig_gen",inputMat,"balance")
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Function Name: hess
+// Returns the Upper Hessenberg decomposition of square input matrix
+// Calculating the hess avlue
+
+inputMat= [3, 1, 1;1,2,2;1,2,2];
+result = armaDenseMat("hess",inputMat)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Function Name: svd
+// Returns ingular value decomposition of dense input matrix
+// Calculating the svd
+
+inputMat= [2,1,0;1,2,1;0,1,2];
+result = armaDenseMat("svd",inputMat)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Ajay.S, Kalai Chelvan.M, Pooja K, Prabhakar P, Dr.K.Indra Gandhi</member>
+   </simplelist>
+</refsection>
+</refentry>

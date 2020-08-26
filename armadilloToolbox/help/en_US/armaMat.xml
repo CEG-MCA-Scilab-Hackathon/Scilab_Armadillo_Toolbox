@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from armaMat.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="armaMat" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>armaMat</refname>
+    <refpurpose>armaMat function applies mathematical functions to each element in Matrix</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   y = armaMat(inp1, inp2, opt)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>y :</term>
+            <listitem><para> ouput 2dmatrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inp1:</term>
+            <listitem><para> Function Name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inp2:</term>
+            <listitem><para> 2dMatrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>opt :</term>
+            <listitem><para> optional additional arguements</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function accepts a 2dMatrix/2dArray and returns the processed Matrix specified in function name (inp1). Available functions exp, exp2, exp10, truncExp, expm1, log, log2, log10, truncLog, log1p, pow, square, sqrt, floor, ceil, round, trunc, erf, erfc, lgamma and sign.
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the exp.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+expres = armaMat("exp",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the exp2.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+exp2res = armaMat("exp2",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the exp10.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+exp10res = armaMat("exp10",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the truncExp.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+truncExpres = armaMat("truncExp",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the expm1.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+expm1res = armaMat("expm1",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the log.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+logres = armaMat("log",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the log2.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+log2res = armaMat("log2",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the log10.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+log10res = armaMat("log10",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the truncLog.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+truncLogres = armaMat("truncLog",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the log1p.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+log1pres = armaMat("log1p",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the pow.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+power = int32(3)
+powres = armaMat("pow",y,power)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the square.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+squareres = armaMat("square",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the sqrt.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+sqrtres = armaMat("sqrt",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the floor.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+floorres = armaMat("floor",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the ceil.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+ceilres = armaMat("ceil",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the round.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+roundres = armaMat("round",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the trunc.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+truncres = armaMat("trunc",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the erf.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+erfres = armaMat("erf",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the erfc.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+erfcres = armaMat("erfc",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the lgamma.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+lgammares = armaMat("lgamma",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the sign.
+y = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+signres = armaMat("sign",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Ajay.S, Kalai Chelvan.M, Pooja K, Prabhakar P, Dr.K.Indra Gandhi</member>
+   </simplelist>
+</refsection>
+</refentry>

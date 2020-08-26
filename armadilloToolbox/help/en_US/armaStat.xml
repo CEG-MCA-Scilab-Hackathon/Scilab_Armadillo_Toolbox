@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from armaStat.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="armaStat" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>armaStat</refname>
+    <refpurpose>under construction do not test</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   y = armaStat(inp1, inp2)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>y :</term>
+            <listitem><para> ouput variable</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inp1:</term>
+            <listitem><para> Function Name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inp2:</term>
+            <listitem><para> input array / 2d array</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function contains the statistical function for 1darray/2darray
+you can pass y as a array as in example or 2d array(matrix)
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the mean.
+y = [ 1, 2, 3, 7, 2 ]
+res = armaStat("mean",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the median.
+y = [ 1, 2, 3, 7, 2 ]
+res = armaStat("median",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the variance.
+y = [ 1, 2, 3, 7, 2 ]
+res = armaStat("variance",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the stddev.
+y = [ 1, 2, 3, 7, 2 ]
+res = armaStat("stddev",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the range.
+y = [ 1, 2, 3, 7, 2 ]
+res = armaStat("range",y)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Ajay.S, Kalai Chelvan.M, Pooja K, Prabhakar P, Dr.K.Indra Gandhi</member>
+   </simplelist>
+</refsection>
+</refentry>

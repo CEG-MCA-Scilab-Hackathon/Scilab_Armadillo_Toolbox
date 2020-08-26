@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from armaImage.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="armaImage" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>armaImage</refname>
+    <refpurpose>armaStat function applies image and signal processing techniques</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   y = armaImage(inp1, inp2, opt)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>y :</term>
+            <listitem><para> ouput variable</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inp1:</term>
+            <listitem><para> Function Name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>inp2:</term>
+            <listitem><para> input array / 2d array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>opt :</term>
+            <listitem><para> optional additional arguements</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function contains the statistical function for 1darray/2darray
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the convolution 1d. 4th paramter 0 for full, 1 for same
+y1 = [1,2,3,4,5,6,7,8];
+y2 = [1,2]
+res = armaImage("conv1d",y1,y2,0)
+res = armaImage("conv1d",y1,y2,1)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Calculating the convolution 2d. (beta version works fine) 4th paramter 0 for full, 1 for same
+// y1 = define matrix
+// y2 = define matrix
+// res = armaImage("conv2d",y1,y2,0)
+// res = armaImage("conv2d",y1,y2,1)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Ajay.S, Kalai Chelvan.M, Pooja K, Prabhakar P, Dr.K.Indra Gandhi</member>
+   </simplelist>
+</refsection>
+</refentry>

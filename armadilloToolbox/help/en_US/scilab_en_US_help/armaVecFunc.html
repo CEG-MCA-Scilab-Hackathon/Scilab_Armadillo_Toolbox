@@ -1,0 +1,265 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>armaVecFunc</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="armaStat.html">&lt;&lt; armaStat</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_572734dd27d84b0d1fcee36fa5f49c02.html">armadilloToolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="armadense.html">armadense &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">armadilloToolbox</a> &gt;&gt; <a href="section_572734dd27d84b0d1fcee36fa5f49c02.html">armadilloToolbox</a> &gt; armaVecFunc</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">armaVecFunc</h1>
+    <p class="refpurpose">armaVec function applies mathematical functions to to double array (vector processing)</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">armaVec</span><span class="default">(</span><span class="default">fname</span><span class="default">, </span><span class="default">inputvec</span><span class="default">, </span><span class="default">opt</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">y :</span>
+            <dd><p class="para">ouput</p></dd></dt>
+        <dt><span class="term">inputvec :</span>
+            <dd><p class="para">Function Name</p></dd></dt>
+        <dt><span class="term">opt :</span>
+            <dd><p class="para">additional arguements</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This function accepts a Array of values of double type and returns the output of respective function executed.
+Available functions are asScalar,</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: asScalar</span>
+<span class="scilabcomment">// Returns the pure scalar value of input array/matrix/array</span>
+<span class="scilabcomment">// Calculating the asScalar.</span>
+<span class="scilabid">inputrowvec</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">inputcolvec</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">inputMat</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span> <span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">6</span><span class="scilabdefault">;</span> <span class="scilabnumber">7</span><span class="scilabdefault">,</span> <span class="scilabnumber">8</span><span class="scilabdefault">,</span> <span class="scilabnumber">10</span><span class="scilabdefault">;</span><span class="scilabopenclose">]</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">asScalar</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputrowvec</span><span class="scilabdefault">,</span><span class="scilabid">inputcolvec</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">asScalar</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputrowvec</span><span class="scilabdefault">,</span><span class="scilabid">inputMat</span><span class="scilabdefault">,</span><span class="scilabid">inputcolvec</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: cross</span>
+<span class="scilabcomment">// Calculate the cross product between A and B, under the assumption that A and B are 3 dimensional vectors</span>
+<span class="scilabcomment">// Calculating the cross.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">inputvec2</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">cross</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: cummulativeSum</span>
+<span class="scilabcomment">// Calculate the cummulativeSum for given array</span>
+<span class="scilabcomment">// Calculating the cummulativeSum.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">cummulativeSum</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: cummulativeProduct</span>
+<span class="scilabcomment">// Calculate the cummulativeProduct for given array</span>
+<span class="scilabcomment">// Calculating the cummulativeProduct.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">cummulativeProduct</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: diagmat</span>
+<span class="scilabcomment">// Returns a matrix with the k-th diagonal containing a copy of the k-th diagonal of X; all other elements are set to zero.</span>
+<span class="scilabcomment">// Calculating the diagmat.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">diagmat</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">diagmat</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: diff</span>
+<span class="scilabcomment">// Return differences between consecutive elements</span>
+<span class="scilabcomment">// Calculating the diff.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">diff</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: dot, cdot, norm_dot</span>
+<span class="scilabcomment">//  dot(A,B): dot product of A and B, treating A and B as vectors</span>
+<span class="scilabcomment">//  cdot(A,B): as per dot(A,B), but the complex conjugate of A is used</span>
+<span class="scilabcomment">//  norm_dot(A,B): normalised dot product; equivalent to dot(A,B) / (∥A∥•∥B∥)</span>
+<span class="scilabcomment">// Calculating the dot, cdot, norm_dot</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">inputvec2</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">dot</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">cdot</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">norm_dot</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabopenclose">)</span>
+
+<span class="scilabcomment">// Function Name: eps</span>
+<span class="scilabcomment">//  Obtain the positive distance of the absolute value of each element of inputvec to the next largest representable floating point number</span>
+<span class="scilabcomment">// Calculating the eps.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">eps</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: findUnique</span>
+<span class="scilabcomment">//  Obtain the positive distance of the absolute value of each element of inputvec to the next largest representable floating point number</span>
+<span class="scilabcomment">//  3rd parameter : 0/1 for ascending/descending</span>
+<span class="scilabcomment">// Calculating the findUnique.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">findUnique</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">findUnique</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: indexMin/indexMax</span>
+<span class="scilabcomment">// Return index of min/max value</span>
+<span class="scilabcomment">// Calculating the indexMin/indexMax.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">indexMin</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">indexMax</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: intersect</span>
+<span class="scilabcomment">// Return the unique elements common to both A and B, sorted in ascending order</span>
+<span class="scilabcomment">// Calculating the intersect.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">inputvec2</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">intersect</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: min/max</span>
+<span class="scilabcomment">// Return min/max value</span>
+<span class="scilabcomment">// Calculating the min/max</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">min</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">max</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: norm</span>
+<span class="scilabcomment">//  Compute the p-norm</span>
+<span class="scilabcomment">//  3rd parameter : </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">-inf</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">=1, </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">inf</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">=2, </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">fro</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">=default</span>
+<span class="scilabcomment">//  </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">-inf</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment"> is the minimum norm, </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">inf</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment"> is the maximum norm, while </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">fro</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment"> is the Frobenius norm</span>
+<span class="scilabcomment">// Calculating the norm</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">norm</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: normalize</span>
+<span class="scilabcomment">// Return its normalised version (ie. having unit p-norm)</span>
+<span class="scilabcomment">//  3rd parameter : p-norm value</span>
+<span class="scilabcomment">// Calculating the normalize.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">normalize</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">normalize</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: reverse</span>
+<span class="scilabcomment">// Return the reversed array</span>
+<span class="scilabcomment">// Calculating the reverse.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">reverse</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: shift</span>
+<span class="scilabcomment">// Return the shifted array in circular manner</span>
+<span class="scilabcomment">// Calculating the shift.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">shift</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: shuffle</span>
+<span class="scilabcomment">// Return the shuffled array</span>
+<span class="scilabcomment">// Calculating the shuffle.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">shuffle</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: sort</span>
+<span class="scilabcomment">// Return the sorted array</span>
+<span class="scilabcomment">//  3rd parameter : 0/1 for ascend/descend</span>
+<span class="scilabcomment">// Calculating the sort.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">sort</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: sortIndex</span>
+<span class="scilabcomment">// Return a vector which describes the sorted order of the elements of inputvec1 (ie. it contains the indices of the elements of inputvec1)</span>
+<span class="scilabcomment">//  3rd parameter : 0/1 for ascend/descend</span>
+<span class="scilabcomment">// Calculating the sortIndex.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">sortIndex</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">sortIndex</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: stableSortIndex</span>
+<span class="scilabcomment">// Return a vector which describes the sorted order of the elements of inputvec1 (ie. it contains the indices of the elements of inputvec1)</span>
+<span class="scilabcomment">//  stable_sort_index() variant preserves the relative order of elements with equivalent values</span>
+<span class="scilabcomment">//  3rd parameter : 0/1 for ascend/descend</span>
+<span class="scilabcomment">// Calculating the stableSortIndex.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">stableSortIndex</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">stableSortIndex</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: sum</span>
+<span class="scilabcomment">// Return the sum of of all elements in array</span>
+<span class="scilabcomment">// Calculating the sum.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">sum</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span>
+
+<span class="scilabcomment">// Function Name: trapz</span>
+<span class="scilabcomment">//  Compute the trapezoidal integral of Y with respect to spacing in X, in each column (dim=0) or each row (dim=1) of Y</span>
+<span class="scilabcomment">// Calculating the trapz.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trapz</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabopenclose">)</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">trapz</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabdefault">,</span><span class="scilabid">inputvec2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Function Name: unique</span>
+<span class="scilabcomment">// Return the unique elements of input Array, sorted in ascending order</span>
+<span class="scilabcomment">// Calculating the unique.</span>
+<span class="scilabid">inputvec1</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabdefault">,</span> <span class="scilabnumber">4</span><span class="scilabdefault">,</span> <span class="scilabnumber">3</span><span class="scilabdefault">,</span> <span class="scilabnumber">2</span><span class="scilabdefault">,</span> <span class="scilabnumber">7</span><span class="scilabdefault">,</span> <span class="scilabnumber">0</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">result</span> <span class="scilaboperator">=</span> <span class="scilabid">armaVec</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">unique</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">inputvec1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Ajay.S, Kalai Chelvan.M, Pooja K, Prabhakar P, Dr.K.Indra Gandhi</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="armaStat.html">&lt;&lt; armaStat</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_572734dd27d84b0d1fcee36fa5f49c02.html">armadilloToolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="armadense.html">armadense &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
