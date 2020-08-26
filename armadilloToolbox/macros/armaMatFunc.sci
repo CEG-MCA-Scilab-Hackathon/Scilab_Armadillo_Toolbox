@@ -1,0 +1,413 @@
+// Copyright (C) 2019 - IIT Bombay - FOSSEE
+//
+// This file must be used under the terms of the CeCILL.
+// This source file is licensed as described in the file COPYING, which
+// you should have received as part of this distribution.  The terms
+// are also available at
+// http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+// Author: Rupak Rokade
+// Organization: FOSSEE, IIT Bombay
+// Email: toolbox@scilab.in
+ 
+ 
+function [y] = armaMatFunc(fName, inputMat, opt)
+    //   armaMatFunc function applies mathematical functions for 2dArray double (Matrix)
+    //
+    //   Syntax
+    //   y = armaMatFunc(fName, inputMat, opt)
+    //  
+    //   Parameters
+    //   y : output
+    //   fName: Function Name
+    //   inputMat: 2dMatrix double
+    //   opt : Additional arguments
+    //
+    //   Description
+    //   This function accepts a 2d Double Array and returns the result of the function which is passed as the first parameter Matrix specified in the function name (fName). Available functions are
+    //   accumulate, absolute, affmultiply, arg,  clamp, cond, cummulativeSum, cummulativeProduct, determinant, diagmat, diagvec, diff, eps, expmat, expmatSym, vectorise, unique, trimatl and trimatu, trans, trace, symmatu and symmatl, sum, sqrtMat, sort, shuffleRowOrColumn, shift, reverse, resize, reshape, repMat, repElem, rcond, rank, powMat, prod, normalize, norm, nonZeros, max, min, logMat, logDet, kron, joinRows, joinCols, joinVert, joinHoriz, inplaceTrans, fliplr, flipud.
+    //
+    // Examples
+    // // Function Name: accumulate
+    // //  Returns the accumulated value of input matrix
+    // // Calculating the accumulate.
+    // inputMat = [1.2, 1, 1.9; 4, 2.6, 5; 2.3, 8, 7];
+    // result = armaMatFunc("accumulate",inputMat)
+    //
+    // Examples
+    // // Function Name: absolute
+    // //  Returns the magnitude of each element of input matrix
+    // // Calculating the absolute.
+    // inputMat = [-1.2, 1, -1.9; 4, 2.6, -5; 2.3, -8, 7];
+    // result = armaMatFunc("absolute",inputMat)
+    //
+    // Examples
+    // // Function Name: affmultiply
+    // //  Returns the product of matric(inp1) and augmented form of another matrix(inp2) 
+    // // Calculating the affmultiply.
+    // inputMat = [-1.2, 1, -1.9; 4, 2.6, -5; 2.3, -8, 7];
+    // inputMat2 = [2.1, 1.4; 2.1, 5.3];
+    // result = armaMatFunc("affmultiply",inputMat,inputMat2)
+    //
+    // Examples
+    // // Function Name: arg
+    // //  Returns the phase angle (in radians) of each element  of input matrix
+    // // Calculating the arg.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("arg",inputMat)
+    //
+    // Examples
+    // // Function Name: clamp
+    // //  Returns matrix with each element clamped to the [min_val, max_val] interval of input matrix
+    // // Calculating the clamp.
+    // inputMat = [123, 109, 230; 120, 345,120];
+    // result = armaMatFunc("clamp",inputMat,100,200)
+    //
+    // Examples
+    // // Function Name: cummulativeSum
+    // //  Returns a matrix containing the cumulative sum of elements in each column (dim=0), or each row (dim=1)  of input matrix
+    // // Calculating the cummulativeSum.
+    // //dim = 1 
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("cummulativeSum",inputMat,1)
+    // //dim = 0
+    // result = armaMatFunc("cummulativeSum",inputMat,0)
+    //
+    //
+    // Examples
+    // // Function Name: cummulativeProduct
+    // // Returns a matrix containing the cumulative product of elements in each column (dim=0), or each row (dim=1)  of input matrix
+    // // Calculating the cummulativeProduct.
+    // //dim = 1 
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("cummulativeProduct",inputMat,1)
+    // //dim = 0
+    // result = armaMatFunc("cummulativeProduct",inputMat,0)
+    //
+    // Examples
+    // // Function Name: determinant
+    // // Returns the determinant of input matrix
+    // // Calculating the determinant.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("determinant",inputMat)
+    //
+    // Examples
+    // // Function Name: diagmat
+    // // Returns a matrix with the k-th diagonal containing a copy of the k-th diagonal of X; all other elements are set to zero. 
+    // // Calculating the diagmat.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // //k=2
+    // result = armaMatFunc("diagmat",inputMat,2)
+    // //k can also be optional,by default k=0
+    // result = armaMatFunc("diagmat",inputMat)
+    //
+    // Examples
+    // // Function Name: diagvec
+    // // Returns the k-th diagonal from the input matrix. 
+    // // Calculating the diagvec.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // //k=2
+    // result = armaMatFunc("diagvec",inputMat,2)
+    // //k can also be optional,by default k=0
+    // result = armaMatFunc("diagvec",inputMat)
+    //
+    // Examples
+    // // Function Name: diff
+    // //  Return a matrix containing the differences between consecutive elements in each column (dim=0), or each row (dim=1) of the input matrix. 
+    // // Calculating the diff.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // // k indicates that the differences are calculated recursively k times 
+    // //k=2
+    // result = armaMatFunc("diff",inputMat,2)
+    // //k can also be optional,by default k=0
+    // result = armaMatFunc("diff",inputMat)
+    // 
+    // Examples
+    // // Function Name: eps
+    // // Returns the positive distance of the absolute value of each element of the input matrix to the next largest representable floating point number. 
+    // // Calculating the eps.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("eps",inputMat)
+    // 
+    // Examples
+    // // Function Name: expmat
+    // // Returns the Matrix exponential of the input matrix. 
+    // // Calculating the expmat.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("expmat",inputMat)
+    // 
+    // Examples
+    // // Function Name: expmatSym
+    // // Returns the Matrix exponential of the input matrix(symmetric/hermitian matrix). 
+    // // Calculating the expmatSym.
+    // inputMat = [-1.2, 1, 1.9; -4, 2.6, 5; -2.3, 8, -7];
+    // result = armaMatFunc("expmatSym",inputMat)
+    //
+    // Examples
+    // // Function Name: fliplr and flipud
+    // //  fliplr(): generate a copy of matrix X, with the order of the columns reversed
+    // //  flipud(): generate a copy of matrix X, with the order of the rows reversed
+    // // Calculating the inplaceTrans
+    // inputMat = [ 1, 2; 3, 4;]
+    // result = armaMatFunc("fliplr",inputMat)
+    // result = armaMatFunc("flipud",inputMat)
+    //
+    // Examples
+    // // Function Name: inplaceTrans
+    // // Returns transposed matrix
+    // // Calculating the inplaceTrans
+    // inputMat = [ 1, 2; 3, 4;]
+    // result = armaMatFunc("inplaceTrans",inputMat)
+    //
+    // Examples
+    // // Function Name: joinRows, joinCols, joinVert, joinHoriz
+    // //  joinrows() and joinhoriz(): horizontal concatenation; join the corresponding rows of the given matrices; the given matrices must have the same number of rows
+    // //  joincols() and joinvert(): vertical concatenation; join the corresponding columns of the given matrices; the given matrices must have the same number of columns
+    // // Calculating the joinRows, joinCols, joinVert, joinHoriz
+    // inputMat1 = [ 1, 2; 3, 4;]
+    // inputMat2 = [2, 3; 4, 5;]
+    // result = armaMatFunc("joinRows",inputMat1,inputMat2)
+    // result = armaMatFunc("joinCols",inputMat1,inputMat2)
+    // result = armaMatFunc("joinVert",inputMat1,inputMat2)
+    // result = armaMatFunc("joinHoriz",inputMat1,inputMat2)
+    //
+    // Examples
+    // // Function Name: kron
+    // //  Return Kronecker tensor product
+    // // Given matrix A (with n rows and p columns) and matrix B (with m rows and q columns), generate a matrix (with nm rows and pq columns) that denotes the tensor product of A and B
+    // // Calculating the kron
+    // inputMat1 = [ 1, 2; 3, 4;]
+    // inputMat2 = [2, 3; 4, 5;]
+    // result = armaMatFunc("kron",inputMat1,inputMat2)
+    //
+    // Examples
+    // // Function Name: logDet
+    // //  Return val and sign, store the calculated log determinant in val and sign the determinant is equal to exp(val)*sign
+    // // Calculating the logDet
+    // inputMat = [ 1, 2; 3, 4;]
+    // result = armaMatFunc("logDet",inputMat)
+    //
+    // Examples
+    // // Function Name: logMat
+    // //  Return Complex matrix logarithm of general square matrix
+    // // Calculating the logMat
+    // inputMat = [ 1, 2; 3, 4;]
+    // result = armaMatFunc("logMat",inputMat)
+    //
+    // Examples
+    // // Function Name: max and min
+    // //  Return all max/min values by row/column
+    // //  3rd parameter : 0/1 specifies row/column, row by default
+    // // Calculating the max/min
+    // inputMat = [ 1, 0, 3; 10, 5, 2; 7, 8, 10;]
+    // result = armaMatFunc("max",inputMat)
+    // result = armaMatFunc("max",inputMat,1)
+    // result = armaMatFunc("min",inputMat)
+    // result = armaMatFunc("min",inputMat,1)
+    //
+    // Examples
+    // // Function Name: nonZeros
+    // // Return all non zero values
+    // // Calculating the nonZeros
+    // inputMat = [ 1, 0, 3; 0, 5, 6; 7, 8, 10;]
+    // result = armaMatFunc("nonZeros",inputMat)
+    //
+    // Examples
+    // // Function Name: norm
+    // //  Return its normalised version, has been normalised to have unit p-norm(3rd parameter)
+    // //  3rd parameter : "-inf"=1, "inf"=2, "fro"=default
+    // // "-inf" is the minimum norm, "inf" is the maximum norm, while "fro" is the Frobenius norm
+    // // Calculating the norm
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 10;]
+    // result = armaMatFunc("norm",inputMat)
+    //
+    // Examples
+    // // Function Name: normalize
+    // //  Return its normalised version, has been normalised to have unit p-norm(3rd parameter)
+    // // Calculating the normalize
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 10;]
+    // result = armaMatFunc("normalize",inputMat)
+    //
+    // Examples
+    // // Function Name: prod
+    // //  Return the product of elements in each column
+    // // Calculating the prod
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 10;]
+    // result = armaMatFunc("prod",inputMat)
+    //
+    // Examples
+    // // Function Name: powMat
+    // //  Matrix power operation: raise square matrix A to the power of n, where n has the type int or double
+    // //  If n has the type double, the resultant matrix B always has complex elements
+    // // Calculating the powMat
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 10;]
+    // i = int32(2)
+    // result = armaMatFunc("powMat",inputMat,i)
+    //
+    // Examples
+    // // Function Name: rank
+    // //  Return the rank of the matrix.
+    // // Calculating the rcond
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 1;]
+    // result = armaMatFunc("rank",inputMat)
+    //
+    // Examples
+    // // Function Name: rcond
+    // //  Return the 1-norm estimate of the reciprocal of the condition number of square matrix A
+    // //  Values close to 1 suggest that A is well-conditioned
+    // //  Values close to 0 suggest that A is badly conditioned
+    // // Calculating the rcond
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 1;]
+    // result = armaMatFunc("rcond",inputMat)
+    //
+    // Examples
+    // // Function Name: repElem
+    // // Generate a matrix by replicating each element
+    // //  The generated matrix has the following size:
+    // //  n_rows  =  num_copies_per_row  *   A.n_rows
+    // //  n_cols  =  num_copies_per_col  *   A.n_cols
+    // //  3rd parameter = num_copies_per_row
+    // //  4th parameter = num_copies_per_col
+    // // Calculating the repElem
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("repElem",inputMat,2,2)
+    //
+    // Examples
+    // // Function Name: repMat
+    // //  Generate a matrix by replicating matrix A in a block-like fashion
+    // //  The generated matrix has the following size:
+    // //  n_rows  =  num_copies_per_row  *   A.n_rows
+    // //  n_cols  =  num_copies_per_col  *   A.n_cols
+    // //  3rd parameter = num_copies_per_row
+    // //  4th parameter = num_copies_per_col
+    // // Calculating the repmat
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("repMat",inputMat,2,2)
+    //
+    // Examples
+    // // Function Name: reshape
+    // //  Generate a vector/matrix/cube with given size specifications, whose elements are taken from the given object in a column-wise manner; the elements in the generated object are placed column-wise (ie. the first column is filled up before filling the second column)
+    // //  The layout of the elements in the generated object will be different to the layout in the given object
+    // //  If the total number of elements in the given object is less than the specified size, the remaining elements in the generated object are set to zero
+    // //  If the total number of elements in the given object is greater than the specified size, only a subset of elements is taken from the given object
+    // //  3rd parameter = row
+    // //  4th parameter = column
+    // // Calculating the reshape
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("reshape",inputMat,2,2)
+    //
+    // Examples
+    // // Function Name: resize
+    // // resize elements by row or column of the input Matrix
+    // //  3rd parameter = row
+    // //  4th parameter = column
+    // // Calculating the resize
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("resize",inputMat,2,2)
+    //
+    // Examples
+    // // Function Name: reverse
+    // //  reverse elements by row or column of the input Matrix
+    // //  3rd parameter = 0/1 for dimension
+    // // Calculating the reverse
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("reverse",inputMat)
+    // result = armaMatFunc("reverse",inputMat,1)
+    //
+    // Examples
+    // // Function Name: shift
+    // //  matrix with the elements shifted by positions in each column (dim=0), or each row (dim=1)
+    // //  3rd parameter = 1/-1 for shifting
+    // //  4th parameter = 0/1 for dimension
+    // // Calculating the shift
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("shift",inputMat,1)
+    // result = armaMatFunc("shift",inputMat,1,1)
+    //
+    // Examples
+    // // Function Name: shuffleRowOrColumn
+    // //  shuffles the Matrix elements in Row Or Column
+    // //  3rd parameter = 0/1 for row/column order
+    // // Calculating the shuffleRowOrColumn
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("shuffleRowOrColumn",inputMat)
+    // result = armaMatFunc("shuffleRowOrColumn",inputMat,1)
+    //
+    // Examples
+    // // Function Name: sort
+    // //  sort input matrix in row or column
+    // //  3rd parameter = 0/1 for asc/dec order
+    // //  4th parameter = 0/1 for row/column
+    // // Calculating the sqrtMat
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("sort",inputMat)
+    // result = armaMatFunc("sort",inputMat,1)
+    // result = armaMatFunc("sort",inputMat,1,1)
+    //
+    // Examples
+    // // Function Name: sqrtMat
+    // //  Complex square root of general square matrix
+    // // Calculating the sqrtMat
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("sqrtMat",inputMat)
+    //
+    // Examples
+    // // Function Name: sum
+    // //  sum all elements row wise or column wise
+    // // Calculating the sum
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("sum",inputMat)
+    // result = armaMatFunc("sum",inputMat,1)
+    //
+    // Examples
+    // // Function Name: symmatu and symmatl
+    // //  symmatu(): generate symmetric matrix from square matrix, by reflecting the upper triangle to the lower triangle
+    // //  symmatl(): generate symmetric matrix from square matrix, by reflecting the lower triangle to the upper triangle
+    // // Calculating the symmatu and symmatl.
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("symmatu",inputMat)
+    // result = armaMatFunc("symmatl",inputMat)
+    //
+    // Examples
+    // // Function Name: trace
+    // // Returns Sum of the elements on the main diagonal of matrix
+    // // Calculating the trace.
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("trace",inputMat)
+    //
+    // Examples
+    // // Function Name: trans
+    // // Returns transpose of matrix double
+    // // Calculating the transpose.
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("trans",inputMat)
+    //
+    // Examples
+    // // Function Name: trimatl and trimatu
+    // //  Create a new matrix by copying either the upper or lower triangular part from square matrix A, and setting the remaining elements to zero
+    // //  trimatu() copies the upper triangular part
+    // //  trimatl() copies the lower triangular part
+    // //  Additional parameter super/sub diagonal level
+    // // Returns the unique array of input matrix
+    // // Calculating the trimatl and trimatu
+    // inputMat = [ 1, 2, 8; 5, 5, 6; 9, 8, 9;]
+    // result = armaMatFunc("trimatl",inputMat)
+    // result = armaMatFunc("trimatl",inputMat,1)
+    // result = armaMatFunc("trimatu",inputMat)
+    // result = armaMatFunc("trimatu",inputMat,1)
+    //
+    // Examples
+    // // Function Name: unique
+    // // Returns the unique array of input matrix
+    // // Calculating the unique.
+    // inputMat = [ 1, 2, 8; 5, 5, 6; 9, 8, 9;]
+    // result = armaMatFunc("unique",inputMat)
+    //
+    // Examples
+    // // Function Name: vectorise
+    // // Returns the vectorise array of input matrix
+    // // Calculating the vectorise.
+    // inputMat = [ 1, 2, 3; 4, 5, 6; 7, 8, 9;]
+    // result = armaMatFunc("vectorise",inputMat)
+ // Authors
+ // Ajay.S, Kalai Chelvan.M, Pooja K, Prabhakar P, Dr.K.Indra Gandhi
+ endfunction 

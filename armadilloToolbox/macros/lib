@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scilablib name="armadilloToolboxlib">
+  <macro name="armaClust" file="armaClust.bin" md5="088d56b3ea95c40dd92a99648f7c92e6"/>
+  <macro name="armaImage" file="armaImage.bin" md5="119da6774f8dc79db7646fd0555de9e4"/>
+  <macro name="armaMat" file="armaMat.bin" md5="e3be0170a8b6e88517451f2c967414e9"/>
+  <macro name="armaMatFunc" file="armaMatFunc.bin" md5="6ad19989900a62799636ad0ba5887fc0"/>
+  <macro name="armaStat" file="armaStat.bin" md5="c52ea74066dabb8033437e4da858bab6"/>
+</scilablib>
